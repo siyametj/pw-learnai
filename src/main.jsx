@@ -29,11 +29,22 @@ import AssumptionRanker from '../components/interactive/AssumptionRanker.jsx'
 import McpToolCallPlanner from '../components/interactive/McpToolCallPlanner.jsx'
 import PiiGuardSimulator from '../components/interactive/PiiGuardSimulator.jsx'
 import SourceNoteBuilder from '../components/interactive/SourceNoteBuilder.jsx'
+import SetupNotesChecklist from '../components/interactive/SetupNotesChecklist.jsx'
 import PlanningContractValidator from '../components/interactive/PlanningContractValidator.jsx'
 import PromptEvaluator from '../components/interactive/PromptEvaluator.jsx'
 import AgentInstructionsAuditor from '../components/interactive/AgentInstructionsAuditor.jsx'
 
 const TOOLS = [
+    {
+        id: 'setup-notes-checklist',
+        name: 'Beginner Onboarding Checklist',
+        module: '00',
+        category: 'Getting Started',
+        component: SetupNotesChecklist,
+        href: 'modules/00-getting-started/module.md',
+        description: 'A one-screen, printable onboarding checklist covering GitHub, 2FA, coding agents, and verification.',
+        tags: ['GitHub', 'Agents', 'SETUP-NOTES.md', 'Checklist'],
+    },
     {
         id: 'source-note-builder',
         name: 'Source Note Builder',
